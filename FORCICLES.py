@@ -55,5 +55,11 @@ while x < 5:
     print(x)
     x = x + 1
 
+    strr = 'Hi loop!'
+
+for i in strr:
+    if i == ',':
+        break
+    print(i)
 
 
