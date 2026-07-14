@@ -1,6 +1,6 @@
 # 1.
 def print_list_reverse(lst):
-    if lst is None or not isinstance(lst, list) or len(lst) == 0:
+    if lst is None or not isinstance(lst, list) or len(lst) == 0: #
         print("Wrong list")
     else:
         print(lst[::-1])
@@ -36,4 +36,11 @@ def print_sub_revers(lst, start, finish):
 
 print_sub_revers([1, 2, 3, 4, 5, 6], 1, 3)
 
+def slovar (students):
+    if students is None or not isinstance(students, dict) or len(students) == 0:
+        return {}
+    result = {}
+    for name,grade in students.items():
+        result.setdefault(grade,[]).append(name)
+    return result
 
