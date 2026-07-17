@@ -82,3 +82,4 @@ def merge_lists(*lists):
     return result
 print(merge_lists([1, 2], [3], [4, 5], []))
 print(merge_lists())
+

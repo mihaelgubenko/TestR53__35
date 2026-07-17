@@ -42,3 +42,18 @@ with open("users.csv", "w", encoding= 'utf - 8', newline= '') as user_file:
 
     writer.writerow(["name", "email", 'role'])
     writer.writerow(['Anna', "ann@gmai.com", 'admin'])
+
+# reading from csv
+
+# with open('user.txt', 'r') as user_file:
+#     reader = csv.reader(user_file)
+#     print(type(reader))
+#     for row in reader:
+#         print(row)
+
+with open('users.csv', 'r', encoding= 'utf - 8') as user_file:
+    reader = csv.DictReader(user_file)
+    for row in reader:
+        print(row)
+        print(row['name'], row['email'], row['role'])
+
