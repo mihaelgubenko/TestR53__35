@@ -1,0 +1,2 @@
+name,email,role
+Anna,ann@gmai.com,admin
