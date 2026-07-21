@@ -28,11 +28,14 @@ def save_profile(name, age, city):
 
 
 def create_reports_folder():
-    reports_folder = Path("reports")
-    reports_folder.mkdir(exist_ok=True)
+    reports_folder = Path("reports") / "homework" / "week_4"  # Создаем вложенный путь: reports/homework/week_4
 
-    with open(reports_folder / "result.txt", "w", encoding="utf-8") as file:
-        file.write("Homework completed successfully!")
+    reports_folder.mkdir(parents=True, exist_ok=True)  # Создаем все папки по пути, если их еще нет
+
+    result_file = reports_folder / "result.txt"  # Создаем путь к файлу result.txt внутри вложенной папки
+
+    with open(result_file, "w", encoding="utf-8") as file:  # Открываем файл для записи в кодировке utf-8
+        file.write("Homework completed successfully!")  # Записываем строку в файл
 
 
 # Test 1: save a shopping list to shopping.txt
@@ -54,7 +57,6 @@ read_students("students.csv")
 save_profile("Maria", 30, "Haifa")
 
 
-# Test 4: create reports folder and result.txt inside it
+# Test 4: create nested reports/homework/week_4 folder and result.txt inside it
 create_reports_folder()
-
 
