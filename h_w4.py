@@ -56,3 +56,5 @@ save_profile("Maria", 30, "Haifa")
 
 # Test 4: create reports folder and result.txt inside it
 create_reports_folder()
+
+
