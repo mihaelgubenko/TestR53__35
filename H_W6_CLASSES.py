@@ -1,3 +1,41 @@
+class Employee:
+    def __init__(self, name, position, salary):
+        self.name = name
+        self.position = position
+        self.salary = salary
+
+    def get_info(self):
+        return f"{self.name} works as {self.position} and earns {self.salary}"
+
+
+emp1 = Employee("Anna", "QA Engineer", 7000)
+emp2 = Employee("Dan", "Administrator", 7800)
+
+print(emp1.get_info())
+print(emp2.get_info())
+
+
+class Product:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+    def buy(self, amount):
+        if amount <= self.quantity:
+            self.quantity -= amount
+        else:
+            return "Not enough products"
+
+
+laptop = Product("Laptop", 1200, 5)
+
+print(laptop.buy(2))
+print("Remaining balance after purchase 2 pcs.:", laptop.quantity)
+print(laptop.buy(10))
+print("The balance has not changed:", laptop.quantity)
+
+
 class Vehicle:
     def move(self):
         return "Vehicle is moving"
@@ -32,12 +70,12 @@ user1 = User("Anna", 22)
 user2 = User("Dan", 29)
 user3 = User("Mila", 31)
 
-print(User.country)
 print(user1.country)
-
+print(user2.country)
+print(user3.country)
 
 User.country = "Canada"
 
-print(User.country)
 print(user1.country)
-
+print(user2.country)
+print(user3.country)
