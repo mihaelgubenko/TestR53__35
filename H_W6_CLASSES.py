@@ -1,3 +1,5 @@
+
+#1---------------------------------------------------------
 class Employee:
     def __init__(self, name, position, salary):
         self.name = name
@@ -14,7 +16,7 @@ emp2 = Employee("Dan", "Administrator", 7800)
 print(emp1.get_info())
 print(emp2.get_info())
 
-
+#2----------------------------
 class Product:
     def __init__(self, name, price, quantity):
         self.name = name
@@ -35,7 +37,7 @@ print("Remaining balance after purchase 2 pcs.:", laptop.quantity)
 print(laptop.buy(10))
 print("The balance has not changed:", laptop.quantity)
 
-
+#3-------------------------
 class Vehicle:
     def move(self):
         return "Vehicle is moving"
@@ -57,7 +59,7 @@ bicycle = Bicycle()
 print(car.move())
 print(bicycle.move())
 
-
+#4--------------------------
 class User:
     country = "Israel"
 
